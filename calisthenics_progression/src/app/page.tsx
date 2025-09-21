@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -7,15 +8,20 @@ export default function Home() {
     <>
         <div className="flex min-h-screen items-center justify-center bg-slate-900">
             <div className="flex gap-4">
-              <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden">
-                <Image
-                  src='/planche.png'
-                  alt='planche'
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
+
+              <Link href="/planche">
+                <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden">
+                  <Image
+                    src='/planche.png'
+                    alt='planche'
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </Link>
+
+              
               <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden">
                 <Image
                   src='/handstand.png'

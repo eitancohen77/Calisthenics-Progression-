@@ -6,18 +6,19 @@ type Props = {
   alt: string;
   label: string;
   href?: string;
-  className?: string; // optional extra classes (e.g., different sizes)
+  className?: string; 
+  locked?: boolean;
 };
 
-export default function HoverCard({ src, alt, label, href, className }: Props) {
+export default function HoverCard({ src, alt, label, href, className, locked = false }: Props) {
   const card = (
 
-    <div className={`relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group ${className ?? ""}`}>
+    <div className={["relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group", locked ? "grayscale opacity-60" : "", className ?? "",].join(" ")}>
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-contain transition-opacity duration-500 group-hover:opacity-20"
+        className={["object-contain transition-opacity duration-500", locked ? "opacity-40" : "group-hover:opacity-20",].join(" ")}
         priority
       />
       <div className="absolute inset-0 z-10 flex items-center justify-center">

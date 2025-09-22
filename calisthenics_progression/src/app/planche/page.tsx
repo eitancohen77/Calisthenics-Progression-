@@ -10,8 +10,8 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 justify-start pl-8">
               <HoverCard src="/planchelean.png" alt="Planche Lean" label="Planche Lean" href="https://youtu.be/6lgNlJZpE1Y?t=33"/>
               <HoverCard src="/frogstand.png" alt="Frog Stand" label="Frog Stand" href="https://www.youtube.com/watch?v=VFYZh24e0RI"/>
-              <HoverCard src="/straddleplanche.png" alt="Straddle Planche" label="Straddle Planche" href="/planche"/>
-              <HoverCard src="/planche.png" alt="Planche" label="Planche" href="/planche"/>
+              <HoverCard src="/straddleplanche.png" alt="Straddle Planche" label="Straddle Planche" href="https://youtu.be/dHLYwZV96zw?t=296"/>
+              <HoverCard src="/planche.png" alt="Planche" label="Planche" href="https://www.youtube.com/watch?v=acij_BzyXRg"/>
             </div>
         </div>
     </>

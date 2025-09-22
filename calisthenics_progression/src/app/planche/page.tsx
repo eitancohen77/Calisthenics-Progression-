@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Image from "next/image";
+import HoverCard from '@/components/HoverCard';
 
 
 export default function Home() {
@@ -7,108 +8,12 @@ export default function Home() {
     <>
         <div className="flex min-h-screen items-center justify-center bg-slate-900">
             <div className="flex gap-4">
-
-                
-                <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group">
-                    <Image
-                        src='/planche.png'
-                        alt='Planche Lean'
-                        fill
-                        className="object-contain transition-opacity duration-500 group-hover:opacity-20"
-                        priority
-                    />
-
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-                            Planche Lean
-                        </p>
-                    </div>
-                </div>
-
-
-              <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group">
-                <Image
-                  src='/planche.png'
-                  alt='Frog Stand'
-                  fill
-                  className="object-contain transition-opacity duration-500 group-hover:opacity-20"
-                  priority
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-                    Frog Stand
-                    </p>
-                </div>
-              </div>
-
-            
-            <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group">
-                <Image
-                  src='/planche.png'
-                  alt='Tuck Planche'
-                  fill
-                  className="object-contain transition-opacity duration-500 group-hover:opacity-20"
-                  priority
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-                    Tuck Planche
-                    </p>
-                </div>
-              </div>
-
-
-            <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group">
-                <Image
-                  src='/planche.png'
-                  alt='Tuck Planche Push Up'
-                  fill
-                  className="object-contain transition-opacity duration-500 group-hover:opacity-20"
-                  priority
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-                    Tuck Planche Push Up
-                    </p>
-                </div>
-              </div>
-
-
-              <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group">
-                <Image
-                  src='/planche.png'
-                  alt='Straddle Planche'
-                  fill
-                  className="object-contain transition-opacity duration-500 group-hover:opacity-20"
-                  priority
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-                    Straddle Planche
-                    </p>
-                </div>
-              </div>
-
-
-              <div className="relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group ">
-                <Image
-                  src='/planche.png'
-                  alt='Planche'
-                  fill
-                  className="object-contain transition-opacity duration-500 group-hover:opacity-20"
-                  priority
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-                    Planche
-                    </p>
-                </div>
-              </div>  
+              <HoverCard src="/planche.png" alt="Frog Stand" label="Frog Stand" href="/planche"/>
+              <HoverCard src="/planche.png" alt="Planche Lean" label="Planche Lean" href="/planche"/>
+              <HoverCard src="/planche.png" alt="Tuck Planche" label="Tuck Planche" href="/planche"/>
+              <HoverCard src="/planche.png" alt="Tuck Planche Push Up" label="Tuck Planche Push Up" href="/planche"/>
+              <HoverCard src="/planche.png" alt="Straddle Planche" label="Straddle Planche" href="/planche"/>
+              <HoverCard src="/planche.png" alt="Planche" label="Planche" href="/planche"/>
             </div>
         </div>
     </>

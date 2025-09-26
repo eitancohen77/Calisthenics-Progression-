@@ -13,12 +13,10 @@ export default function Home() {
               <HoverCard src="/planchelean.png" alt="Planche Lean" label="Planche Lean" href="https://youtu.be/6lgNlJZpE1Y?t=33"/>
               <HoverCard src="/frogstand.png" alt="Frog Stand" label="Frog Stand" href="https://www.youtube.com/watch?v=VFYZh24e0RI"/>
               <HoverCard src="/straddleplanche.png" alt="Straddle Planche" label="Straddle Planche" href="https://youtu.be/dHLYwZV96zw?t=296"/>
-              <HoverCard src="/planche.png" alt="Planche" label="Planche" href="https://www.youtube.com/watch?v=acij_BzyXRg"/>
-                <TwoFrameAnimator
-                  srcA="/planchepressup.png"
-                  srcB="/planchepressdown.png"
-                  speedMs={400} 
-                />
+              
+              <HoverCard srcA="/straddleplanche.png" srcB="/straddleplanche.png" alt="Straddle Planche" label="Straddle Planche" href="https://youtu.be/dHLYwZV96zw?t=296"/>
+              <HoverCard srcA="/planchepressup.png" srcB="/planchepressdown.png" alt="Planche" label="Planche" href="/planche"/>
+
               
             </div>
         </div>

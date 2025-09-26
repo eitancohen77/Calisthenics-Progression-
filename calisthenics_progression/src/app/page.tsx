@@ -13,7 +13,7 @@ export default function Home() {
               <HoverCard src="/planche.png" alt="Planche" label="Planche" href="/planche"/>
               <HoverCard src="/handstand.png" alt="Handstand" label="Handstand" href="/handstand"/>
               <HoverCard src="/pullup.png" alt="Pull-Ups" label="Pull-Ups" href="/pullups"/>
-
+              <HoverCard srcA="/planchepressup.png" srcB="/planchepressdown.png" alt="Planche" label="Planche" href="/planche"/>
             </div>
         </div>
     </>

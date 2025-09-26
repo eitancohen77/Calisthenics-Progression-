@@ -1,34 +1,69 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import TwoFrameAnimator from "@/components/test";
 
 type Props = {
-  src: string;
+  srcA: string;      // first frame
+  srcB: string;      // second frame
   alt: string;
   label: string;
   href?: string;
-  className?: string; 
+  className?: string;
   locked?: boolean;
+  width?: number;
+  height?: number;
+  speedMs?: number;
 };
 
-export default function HoverCard({ src, alt, label, href, className, locked = false }: Props) {
+export default function HoverCard({
+  srcA,
+  srcB,
+  alt,
+  label,
+  href,
+  className,
+  locked = false,
+  width = 256,   // ~ w-64
+  height = 160,  // ~ h-40
+  speedMs = 450,
+}: Props) {
   const card = (
-
-    <div className={["relative w-64 h-40 bg-white p-2 rounded shadow hover:shadow-xl hover:scale-105 transition-transform overflow-hidden group", locked ? "grayscale opacity-60" : "", className ?? "",].join(" ")}>
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className={["object-contain transition-opacity duration-500", locked ? "opacity-40" : "group-hover:opacity-20",].join(" ")}
-        priority
-      />
-      <div className="absolute inset-0 z-10 flex items-center justify-center">
-        <p className="text-black text-3xl font-semibold opacity-0 transition-opacity duration-500 group-hover:opacity-100 text-center">
-          {label}
-        </p>
-      </div>
-    </div>
+    <TwoFrameAnimator
+      srcA={srcA}
+      srcB={srcB}
+      alt={alt}
+      width={width}
+      height={height}
+      speedMs={speedMs}
+      className={[
+        "group rounded-xl",          // rounding & base
+        locked ? "grayscale opacity-60" : "",
+        className ?? "",
+      ].join(" ")}
+      // This line preserves the “dim on hover” look like pic 2
+      imgClassName={locked ? "opacity-40" : "group-hover:opacity-20"}
+    >
+      {/* Centered label that fades in on hover */}
+      <p className={[
+        "text-black text-3xl font-semibold text-center",
+        locked ? "opacity-100" : "opacity-0 group-hover:opacity-100",
+        "transition-opacity duration-500",
+      ].join(" ")}>
+        {label}
+      </p>
+    </TwoFrameAnimator>
   );
 
-  // Only make it a link if href was provided
-  return href ? <Link href={href}>{card}</Link> : card;
+  return href ? (
+    <Link
+      href={href}
+      className={locked ? "pointer-events-none" : ""}
+      aria-disabled={locked}
+    >
+      {card}
+    </Link>
+  ) : (
+    card
+  );
 }

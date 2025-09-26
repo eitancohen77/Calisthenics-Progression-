@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Image from "next/image";
 import HoverCard from '@/components/HoverCard';
+import TwoFrameAnimator from '@/components/test';
+
 
 const isLocked = true
 export default function Home() {
@@ -12,6 +14,12 @@ export default function Home() {
               <HoverCard src="/frogstand.png" alt="Frog Stand" label="Frog Stand" href="https://www.youtube.com/watch?v=VFYZh24e0RI"/>
               <HoverCard src="/straddleplanche.png" alt="Straddle Planche" label="Straddle Planche" href="https://youtu.be/dHLYwZV96zw?t=296"/>
               <HoverCard src="/planche.png" alt="Planche" label="Planche" href="https://www.youtube.com/watch?v=acij_BzyXRg"/>
+                <TwoFrameAnimator
+                  srcA="/planchepressup.png"
+                  srcB="/planchepressdown.png"
+                  speedMs={400} 
+                />
+              
             </div>
         </div>
     </>

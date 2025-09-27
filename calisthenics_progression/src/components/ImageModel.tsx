@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import TwoFrameAnimator from "@/components/test";
+import TwoFrameAnimator from "@/components/TwoFrameAnimator";
 
 type Props = {
   open: boolean;

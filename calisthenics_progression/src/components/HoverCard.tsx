@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import TwoFrameAnimator from "@/components/test";
+import TwoFrameAnimator from "@/components/TwoFrameAnimator";
 
 type Props = {
   srcA: string;      // first frame

@@ -10,10 +10,9 @@ export default function Home() {
     <>
         <div className="flex min-h-screen items-center justify-center bg-slate-900">
             <div className="flex gap-4">
-              <HoverCard src="/planche.png" alt="Planche" label="Planche" href="/planche"/>
-              <HoverCard src="/handstand.png" alt="Handstand" label="Handstand" href="/handstand"/>
-              <HoverCard src="/pullup.png" alt="Pull-Ups" label="Pull-Ups" href="/pullups"/>
-              <HoverCard srcA="/planchepressup.png" srcB="/planchepressdown.png" alt="Planche" label="Planche" href="/planche"/>
+              <HoverCard srcA="/planche.png" srcB="/planche.png" alt="Planche" label="Planche" href="/planche"/>
+              <HoverCard srcA="/handstand.png" srcB="/handstand.png" alt="Handstand" label="Handstand" href="/handstand"/>
+              <HoverCard srcA="/pullup.png" srcB="/pullup.png" alt="Pull-Ups" label="Pull-Ups" href="/pull-Ups"/>
             </div>
         </div>
     </>
